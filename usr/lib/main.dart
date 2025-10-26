@@ -1,3 +1,4 @@
+import 'package:ethio_tunnel/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -139,7 +140,9 @@ class _DashboardPageState extends State<DashboardPage> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // Navigate to settings page
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
             },
           ),
         ],
